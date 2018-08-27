@@ -32,7 +32,7 @@ router.get('/:addressId',function (req, res, next) {
 	var reqAddressId = req.params.addressId;
 	
 	// Now we just support 3 mock address details, their id is: 0, 1, 2
-	if (reqAddressId != '0' && reqAddressId != '1' && reqAddressId != '2') {
+	if (reqAddressId != '0' && reqAddressId != '1' && reqAddressId != '2' && reqAddressId != '4'  && reqAddressId != '5' && reqAddressId != '6' && reqAddressId != '7' && reqAddressId != '8' && reqAddressId != '9' && reqAddressId != '10' && reqAddressId != '11' && reqAddressId != '12' && reqAddressId != '13' && reqAddressId != '14' && reqAddressId != '15' && reqAddressId != '16' && reqAddressId != '17'&& reqAddressId != '18' && reqAddressId != '19' && reqAddressId != '20' && reqAddressId != '21' ) {
 		return next({"message":"404 Err", "status":404});
 	}
 	

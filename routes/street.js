@@ -15,6 +15,8 @@ router.get('/:postcode/street/:street',function (req, res, next) {
 		fileName = "street7066.json";
 	} else if (street==="Test Street" && postCode==='8088') {
 		fileName = "street8088.json";
+	} else if (street==="TestStreetName" && postCode==='9011') {
+		fileName = "street9011.json";
 	}
 	
 	if (util.isUndefined(fileName)) {

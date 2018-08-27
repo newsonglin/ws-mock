@@ -11,6 +11,8 @@ router.get('/findSuburb', function (req, res, next) {
 		jsonFileName = 'findSuburb1.json';
 	} else if (suburbQueryStr === 'suburb2') {
 		jsonFileName = 'findSuburb2.json';
+	} else if (suburbQueryStr === 'FDG') {
+		jsonFileName = 'findSuburbFDG.json';
 	}
 	
 	if (util.isUndefined(jsonFileName)) {

@@ -1,0 +1,141 @@
+{
+  "id": 5,
+  "unitAndFloor": "3R",
+  "streetNumber": 258,
+  "streetName": "TestStreetName",
+  "suburb": "FDG",
+  "city": "Wellington",
+  "postcode": 9011,
+  "type": "physical",
+  "characteristics":
+    {
+      "Address":{
+        "Floor":null,
+        "FlatNumber":null,
+        "HouseNumberName":"258",
+        "StreetName":"TestStreetName",
+        "Suburb":"FDG",
+        "City":"Te Aroha",
+        "IsPhysical":true,
+        "IsPostal":true,
+        "DPID":"1309888",
+        "ESpatialId":"1110267",
+        "AddressType":"URBAN",
+        "Postcode":"9011",
+        "PostalSummary":{
+          "Line1":"257 TestStreetName",
+          "Line2":"Te Aroha 3320",
+          "Line3":null,
+          "Line4":null,
+          "Line5":null
+        },
+        "Id":"1110267",
+        "OneLineDescription":"12 Koromiko Street, Te Aroha 3320",
+        "ProviderId":"1110267",
+        "RUWProfiles":null
+      },
+      "RUWProfile":{
+        "Id":null,
+        "EstablishedOn":null,
+        "Description":null,
+        "UnderwritingAuthorityCode":null,
+        "ProfileCharValues":[
+          {
+            "ProfileSpecCharCode":"BUS_REG",
+            "Value":"4",
+            "ValueCode":null
+          },
+          {
+            "ProfileSpecCharCode":"CON_PRICE_ADJUSTOR",
+            "Value":"1",
+            "ValueCode":null
+          },
+          {
+            "ProfileSpecCharCode":"CON_RISK_GROUP",
+            "Value":"62",
+            "ValueCode":null
+          },
+          {
+            "ProfileSpecCharCode":"CON_UW_GRP",
+            "Value":"1",
+            "ValueCode":null
+          },
+          {
+            "ProfileSpecCharCode":"HAZ_COASTAL",
+            "Value":"0",
+            "ValueCode":null
+          },
+          {
+            "ProfileSpecCharCode":"HAZ_EARTHQUAKE",
+            "Value":"0",
+            "ValueCode":null
+          },
+          {
+            "ProfileSpecCharCode":"HAZ_FLOOD",
+            "Value":"1",
+            "ValueCode":null
+          },
+          {
+            "ProfileSpecCharCode":"HAZ_GEOTHERMAL",
+            "Value":"0",
+            "ValueCode":null
+          },
+          {
+            "ProfileSpecCharCode":"HAZ_LANDSLIP",
+            "Value":"1",
+            "ValueCode":null
+          },
+          {
+            "ProfileSpecCharCode":"HOU_PRICE_ADJUSTOR",
+            "Value":"1",
+            "ValueCode":null
+          },
+          {
+            "ProfileSpecCharCode":"HOU_RISK_GROUP",
+            "Value":"18",
+            "ValueCode":null
+          },
+          {
+            "ProfileSpecCharCode":"HOU_UW_GRP",
+            "Value":"1",
+            "ValueCode":null
+          },
+          {
+            "ProfileSpecCharCode":"MTR_PRICE_ADJUSTOR",
+            "Value":"1",
+            "ValueCode":null
+          },
+          {
+            "ProfileSpecCharCode":"MTR_RISK_GROUP",
+            "Value":"25",
+            "ValueCode":null
+          },
+          {
+            "ProfileSpecCharCode":"POSTCODE_LOADING",
+            "Value":"1",
+            "ValueCode":null
+          },
+          {
+            "ProfileSpecCharCode":"RatingBranchLoading",
+            "Value":"1",
+            "ValueCode":null
+          }
+        ]
+      },
+      "Context":{
+        "CallerGroupId":null,
+        "CallerAppId":null,
+        "CallerRef":"aaa",
+        "CallerTransId":"bbb",
+        "RetryCount":0,
+        "AuthToken":null
+      },
+      "Result":{
+        "Success":true,
+        "Messages":[
+
+        ]
+      },
+      "BuildVersion":"3.3.4.37"
+    }
+}
