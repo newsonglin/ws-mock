@@ -23,6 +23,17 @@ router.get('/findByRego/:registrationNumber', function (req, res, next) {
             vehicle=dataObject.vehicles[0];//always return a vehicle
         }
 
+		if(vehicle){
+		    delete vehicle.vehicleClass;
+		    delete vehicle.registrationNumber;
+			delete vehicle.defaultValue;
+			delete vehicle.agreedValueMin;
+			delete vehicle.agreedValueMax;
+			delete vehicle.hotlistFlags;
+			delete vehicle.characteristics;
+			delete vehicle.aaaaa;
+		}
+		
         res.set({'Content-Type': 'application/json'});
         res.end(JSON.stringify(vehicle, null, 2));
     });
@@ -214,6 +225,11 @@ router.get('/redbookReference/:redbookReference', function (req, res,next)  {
             return vehicle.redbookReference === req.params.redbookReference;
         });
 
+		if(vehicle){
+		    delete vehicle.vehicleClass;
+		    delete vehicle.registrationNumber;
+		}
+		
         res.set({'Content-Type':'application/json'});
         res.end( JSON.stringify(vehicle,null,2) );
     });
