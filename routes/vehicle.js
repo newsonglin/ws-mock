@@ -20,7 +20,7 @@ router.get('/findByRego/:registrationNumber', function (req, res, next) {
         });
 
         if(!vehicle){
-            vehicle=dataObject.vehicles[0];//always return a vehicle
+            vehicle=dataObject.vehicles[0];//always return a vehicle for easy use
         }
 
 		if(vehicle){
@@ -31,7 +31,6 @@ router.get('/findByRego/:registrationNumber', function (req, res, next) {
 			delete vehicle.agreedValueMax;
 			delete vehicle.hotlistFlags;
 			delete vehicle.characteristics;
-			delete vehicle.aaaaa;
 		}
 		
         res.set({'Content-Type': 'application/json'});
