@@ -1,0 +1,206 @@
+[
+  {
+    "bankId": "27",
+    "bankBranch": "3844",
+    "accountNumber": "63200061",
+    "accountSuffix": "0043",
+    "responseCode": 200,
+    "response": {
+      "valid": true,
+      "validationErrorMessage": "",
+      "bankName": "Westpac"
+    }
+  },
+  {
+    "bankId": "01",
+    "bankBranch": "0902",
+    "accountNumber": "00068389",
+    "accountSuffix": "0000",
+    "responseCode": 200,
+    "response": {
+      "valid": true,
+      "validationErrorMessage": "",
+      "bankName": "ANZ Bank New Zealand"
+    }
+  },
+  {
+    "bankId": "10",
+    "bankBranch": "902",
+    "accountNumber": "0068389",
+    "accountSuffix": "0000",
+    "responseCode": 400,
+    "response": {
+      "bankBranch": [
+        "BankBranch has to be numeric and the length has to be 4"
+      ]
+    }
+  },
+  {
+    "bankId": "27",
+    "bankBranch": "3844",
+    "accountNumber": "63200061",
+    "accountSuffix": "0043",
+    "responseCode": 200,
+    "response": {
+      "valid": true,
+      "validationErrorMessage": "",
+      "bankName": "Westpac"
+    }
+  },
+  {
+    "bankId": "08",
+    "bankBranch": "6523",
+    "accountNumber": "01954512",
+    "accountSuffix": "0001",
+    "responseCode": 200,
+    "response": {
+      "valid": true,
+      "validationErrorMessage": "",
+      "bankName": "Bank of New Zealand"
+    }
+  },
+  {
+    "bankId": "26",
+    "bankBranch": "2600",
+    "accountNumber": "00320871",
+    "accountSuffix": "0044",
+    "responseCode": 200,
+    "response": {
+      "valid": true,
+      "validationErrorMessage": "",
+      "bankName": "Unknown Bank"
+    }
+  },
+  {
+    "bankId": "26",
+    "bankBranch": "2600",
+    "accountNumber": "95228871",
+    "accountSuffix": "0032",
+    "responseCode": 200,
+    "response": {
+      "valid": true,
+      "validationErrorMessage": "",
+      "bankName": "Unknown Bank"
+    }
+  },
+  {
+    "bankId": "01",
+    "bankBranch": "1111",
+    "accountNumber": "00013351",
+    "accountSuffix": "0010",
+    "responseCode": 200,
+    "response": {
+      "valid": true,
+      "validationErrorMessage": "",
+      "bankName": "ANZ Bank New Zealand"
+    }
+  },
+  {
+    "bankId": "03",
+    "bankBranch": "0902",
+    "accountNumber": "00022372",
+    "accountSuffix": "0003",
+    "responseCode": 200,
+    "response": {
+      "valid": true,
+      "validationErrorMessage": "",
+      "bankName": "Westpac"
+    }
+  },
+  {
+    "bankId": "06",
+    "bankBranch": "0988",
+    "accountNumber": "00068389",
+    "accountSuffix": "0021",
+    "responseCode": 200,
+    "response": {
+      "valid": true,
+      "validationErrorMessage": "",
+      "bankName": "ANZ Bank New Zealand"
+    }
+  },
+  {
+    "bankId": "11",
+    "bankBranch": "5555",
+    "accountNumber": "00018477",
+    "accountSuffix": "0000",
+    "responseCode": 200,
+    "response": {
+      "valid": true,
+      "validationErrorMessage": "",
+      "bankName": "ANZ Bank New Zealand"
+    }
+  },
+  {
+    "bankId": "08",
+    "bankBranch": "6523",
+    "accountNumber": "84954513",
+    "accountSuffix": "0081",
+    "responseCode": 200,
+    "response":{
+      "valid": true,
+      "validationErrorMessage": "",
+      "bankName": "Bank of New Zealand"
+    }
+  },
+  {
+    "bankId": "08",
+    "bankBranch": "6587",
+    "accountNumber": "01954512",
+    "accountSuffix": "0051",
+    "responseCode": 200,
+    "response":{
+      "valid": true,
+      "validationErrorMessage": "",
+      "bankName": "Bank of New Zealand"
+    }
+  },
+  {
+    "bankId": "08",
+    "bankBranch": "6541",
+    "accountNumber": "21554352",
+    "accountSuffix": "0001",
+    "responseCode": 200,
+    "response":{
+      "valid": true,
+      "validationErrorMessage": "",
+      "bankName": "Bank of New Zealand"
+    }
+  },
+  {
+    "bankId": "31",
+    "bankBranch": "2800",
+    "accountNumber": "00000000",
+    "accountSuffix": "0000",
+    "responseCode": 200,
+    "response":{
+      "valid": true,
+      "validationErrorMessage": "",
+      "bankName": "Citibank N.A."
+    }
+  },
+  {
+    "bankId": "01",
+    "bankBranch": "2800",
+    "accountNumber": "00000000",
+    "accountSuffix": "0000",
+    "responseCode": 200,
+    "response":{
+      "valid": false,
+      "validationErrorMessage": "Invalid branch for specified bank",
+      "bankName": "ANZ Bank New Zealand"
+    }
+  },
+  {
+    "bankId": "31",
+    "bankBranch": "3333",
+    "accountNumber": "00000000",
+    "accountSuffix": "0000",
+    "responseCode": 200,
+    "response":{
+      "valid": false,
+      "validationErrorMessage": "Invalid branch for specified bank",
+      "bankName": "Citibank N.A."
+    }
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "id": 0,
+    "description": "11 Courtney Place, Auckland Central, Wellington 6011"
+  },
+  {
+    "id": 1,
+    "description": "22 Jollys Jewellery, Auckland Central, Auckland 7066"
+  },
+  {
+    "id": 2,
+    "description": "33 Test Street (No characteristics!!!), Auckland Central, Auckland 8088"
+  },
+  {
+    "id": 3,
+    "description": "For testing Address Details Not Found"
+  },
+  {
+     "id": 4,
+     "description": "257 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 5,
+	  "description": "258 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 6,
+	  "description": "259 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 7,
+	  "description": "260 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 8,
+	  "description": "261 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 9,
+	  "description": "262 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 10,
+	  "description": "263 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 11,
+	  "description": "264 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 12,
+	  "description": "265 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 13,
+	  "description": "266 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 14,
+	  "description": "267 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 15,
+	  "description": "268 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 16,
+	  "description": "269 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 17,
+	  "description": "270 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 18,
+	  "description": "271 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 19,
+	  "description": "272 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 20,
+	  "description": "273 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 21,
+	  "description": "274 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+	  "id": 22,
+	  "description": "275 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+    "id": 23,
+    "description": "276 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+    "id": 24,
+    "description": "277 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+    "id": 25,
+    "description": "278 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+    "id": 26,
+    "description": "279 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+    "id": 27,
+    "description": "280 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+    "id": 28,
+    "description": "281 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+    "id": 29,
+    "description": "282 TestStreetName, Ferndale, Ferndale 9011"
+  },
+  {
+    "id": 101954910,
+    "description": "44 Barbados Drive, Unsworth Heights, Auckland 0632"
+  },
+  {
+    "id": 100091503,
+    "description": "Flat 1, 44 Barbados Drive, Unsworth Heights, Auckland 0632"
+  },
+  {
+    "id": 100091504,
+    "description": "Flat 2, 44 Barbados Drive, Unsworth Heights, Auckland 0632"
+  },
+  {
+    "id": 100886345,
+    "description": "1 Brabant Road, Waiatarua, Auckland 0612"
+  }
+]

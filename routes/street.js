@@ -17,13 +17,16 @@ router.get('/:postcode/street/:street',function (req, res, next) {
 		fileName = "street8088.json";
 	} else if (street==="TestStreetName" && postCode==='9011') {
 		fileName = "street9011.json";
+	} else if (street==="Street (No characteristics!)" && postCode==='1234') {
+		fileName = "street1234NC.json";
 	}
 	
 	if (util.isUndefined(fileName)) {
-		return next({"message":"404 Err", "status":404});
+		//return next({"message":"404 Err", "status":404});
+		fileName = "streetNotFound.json";
 	}
 	
-    fs.readFile( __dirname + "/../data/" + fileName, 'utf8', function (err, data) {
+    fs.readFile( __dirname + "/../data/address/" + fileName, 'utf8', function (err, data) {
         console.log( data );
         var dataObject = JSON.parse(data);
         res.set({'Content-Type':'application/json','Encodeing':'utf8'})

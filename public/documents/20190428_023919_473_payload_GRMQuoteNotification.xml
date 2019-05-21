@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><twr-docgen-payload xmlns:base="http://www.eisgroup.com/schema/eis/2015/base-core" xmlns:od="http://www.eisgroup.com/schema/eis/2016/docgen-ondemand">
+    <userProfile>
+        <domain>corporate</domain>
+        <name>qa</name>
+        <enabled>true</enabled>
+        <firstName>QA</firstName>
+        <ipbUser>true</ipbUser>
+        <jobTitle/>
+        <lastName>QA user</lastName>
+        <middleName/>
+        <systemUserInd>false</systemUserInd>
+        <agencyNumber>GRM_Apexadvice</agencyNumber>
+        <availableForWorkInd>true</availableForWorkInd>
+        <billingAuthorityLevel>level5</billingAuthorityLevel>
+        <claimsAuthorityLevel>CLAIMS_AUTHORITY_LVL3</claimsAuthorityLevel>
+        <commissionable>false</commissionable>
+        <emailAddress/>
+        <extension/>
+        <fax>
+            <formattedValue/>
+            <phoneFormatter/>
+            <phoneNumber/>
+        </fax>
+        <isAgent>false</isAgent>
+        <loggedInd>false</loggedInd>
+        <login>
+            <loginName>qa</loginName>
+        </login>
+        <phone>
+            <formattedValue/>
+            <phoneFormatter/>
+            <phoneNumber/>
+        </phone>
+        <restrictAccess>false</restrictAccess>
+        <sellsInsuranceProducts>true</sellsInsuranceProducts>
+        <signatureURI/>
+        <type>Front Office</type>
+        <underwritingAuthorityLevel>0</underwritingAuthorityLevel>
+        <userAgencyLocations>
+            <agencyCode>GRM_Apexadvice</agencyCode>
+            <agencyDefaultIndicator>true</agencyDefaultIndicator>
+            <agencyLocationName>GRM - Apex Advice</agencyLocationName>
+            <agencyLocationStatus>Active</agencyLocationStatus>
+        </userAgencyLocations>
+        <userAgencyLocations>
+            <agencyCode>QAG</agencyCode>
+            <agencyDefaultIndicator>false</agencyDefaultIndicator>
+            <agencyLocationName>QA Agency</agencyLocationName>
+            <agencyLocationStatus>Active</agencyLocationStatus>
+        </userAgencyLocations>
+        <userAgencyLocations>
+            <agencyCode>twr_online</agencyCode>
+            <agencyDefaultIndicator>false</agencyDefaultIndicator>
+            <agencyLocationName>Tower - Online</agencyLocationName>
+            <agencyLocationStatus>Active</agencyLocationStatus>
+        </userAgencyLocations>
+        <userProfileExtension/>
+    </userProfile>
+</twr-docgen-payload>

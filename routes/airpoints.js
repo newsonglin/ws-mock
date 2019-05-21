@@ -15,19 +15,20 @@ router.get('/validateMembership', function (req, res,next)  {
 
     var airpointsResult = {};
     airpointsResult.result = true;
-
-    if (req.query.airpointsNumber !== '123456') {
+    airpointsResult.validationMessage="Airpoints Number Is Valid.";
+    console.log(req.query);
+    if (req.query.airpointsNumber == '123456') {
         airpointsResult.result = false;
-        airpointsResult.message = "airpoints membership number ["+req.query.airpointsNumber+"] is not found"
-    } else if (req.query.firstName !== 'Isaac') {
+        airpointsResult.validationMessage = "airpoints membership number ["+req.query.airpointsNumber+"] is not found"
+    } else if (req.query.firstName == 'InvalidFirstName') {
         airpointsResult.result = false;
-        airpointsResult.message = "The first name of airpoints membership doesn't match"
-    } else if (req.query.lastName !== 'Wu') {
+        airpointsResult.validationMessage = "The first name of airpoints membership doesn't match"
+    } else if (req.query.lastName == 'InvalidLastName') {
         airpointsResult.result = false;
-        airpointsResult.message = "The last name of airpoints membership doesn't match"
+        airpointsResult.validationMessage = "The last name of airpoints membership doesn't match"
     }
-    res.end( JSON.stringify(airpointsResult,null,2) );
-
+    res.set({'Content-Type':'application/json','Encodeing':'utf8'})
+    res.end(JSON.stringify(airpointsResult,null,2) );
 });
 
 module.exports = router;

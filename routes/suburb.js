@@ -3,39 +3,27 @@ var util = require('util');
 var router = express.Router();
 var fs = require("fs");
 
+var suburbData = []
+fs.readFile( __dirname + "/../data/address/findSuburbData.json" , 'utf8', function (err, data) {
+        //console.log("Suburb Data");
+        //console.log( data );
+        suburbData = JSON.parse(data);
+});
+
 router.get('/findSuburb', function (req, res, next) {
-	var suburbQueryStr = req.query.suburbQuery;
-	
-	var jsonFileName;
-	if (suburbQueryStr === 'suburb1') {
-		jsonFileName = 'findSuburb1.json';
-	} else if (suburbQueryStr === 'suburb2') {
-		jsonFileName = 'findSuburb2.json';
-	} else if (suburbQueryStr === 'FDG') {
-		jsonFileName = 'findSuburbFDG.json';
-	}
-	
-	if (util.isUndefined(jsonFileName)) {
-		 res.set({'Content-Type':'application/json','Encodeing':'utf8'});
-			 
-		 var noAddressfound = []; 
-		 res.end(JSON.stringify(noAddressfound));
-		 
-		 return;
-	}
-	
-	
-	
-    fs.readFile( __dirname + "/../data/" + jsonFileName, 'utf8', function (err, data) {
-        console.log( data );
-        var dataObject = JSON.parse(data);
-        if (util.isUndefined(req.query.suburbQuery)) {
-            return next({"message":"Query string is not passed", "status":400});
+	if (util.isUndefined(req.query.suburbQuery)) {
+        return next({"message":"Query string is not passed", "status":400});
+    }
+    var suburbQueryStr = req.query.suburbQuery.toLowerCase();
+    var matchedData=[];
+    for (var i=0; i<suburbData.length; i++) {
+        if(suburbData[i].suburb.toLowerCase().indexOf(suburbQueryStr)>-1 || suburbData[i].city.toLowerCase().indexOf(suburbQueryStr)>-1 || suburbData[i].postcode.toLowerCase().indexOf(suburbQueryStr)>-1){
+            //console.log(dataObject[i]);
+            matchedData.push(suburbData[i]);
         }
-        //dataObject[0].suburb = dataObject[0].suburb + ' query:' + req.query.suburbQuery;
-        res.set({'Content-Type':'application/json','Encodeing':'utf8'})
-        res.end( JSON.stringify(dataObject,null,2) );
-    });
+    }
+    res.set({'Content-Type':'application/json','Encodeing':'utf8'})
+    res.end( JSON.stringify(matchedData,null,2) );
 })
 
 module.exports = router;

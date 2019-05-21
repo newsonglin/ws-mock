@@ -3,27 +3,46 @@ var util = require('util');
 var router = express.Router();
 var fs = require("fs");
 
-var  badHttpStatus=['400','401','402','403','404','422','500'];
+var badHttpStatus=['400','401','402','403','404','422','500'];
+var vehicleData = [];
+var vehicleMap = [];
+var makesMap = [];
+
+fs.readFile(__dirname + "/../data/vehicle/" + "vehicles.json", 'utf8', function (err, data) {
+    vehicleData = JSON.parse(data);
+    vehicleMap['car']=vehicleData.vehicles.filter(function (vehicle){
+                            return vehicle.vehicleClass==='car';
+                      });
+    vehicleMap['motorcycle']=vehicleData.vehicles.filter(function (vehicle){
+                                   return vehicle.vehicleClass==='motorcycle';
+    });
+    makesMap['car']=vehicleMap['car'].map(function (vehicle){return vehicle.make}).filter(distinct);
+    makesMap['motorcycle']=vehicleMap['motorcycle'].map(function (vehicle){return vehicle.make}).filter(distinct);
+
+     console.log('vehicleMap[motorcycle]='+vehicleMap['motorcycle'].length);
+     console.log('makesMap[motorcycle]='+makesMap['motorcycle'].length);
+     console.log('vehicleMap[car]='+vehicleMap['car'].length);
+     console.log('makesMap[car]='+makesMap['car'].length);
+     console.log('vehicleData='+vehicleData.vehicles.length);
+});
 
 
 router.get('/findByRego/:registrationNumber', function (req, res, next) {
-    fs.readFile(__dirname + "/../data/vehicle/" + "vehicles.json", 'utf8', function (err, data) {
-        var dataObject = JSON.parse(data);
-
         if (badHttpStatus.indexOf(req.params.registrationNumber) !== -1) {
             mockHttpErrorStatus(req.params.registrationNumber, next);
             return;
         }
 
-        var vehicle = dataObject.vehicles.find(function (vehicle) {
+		var applicableVehicles=[];
+        if(req.query.vehicleClass==="car" || req.query.vehicleClass==="motorcycle" ){
+            applicableVehicles=vehicleMap[req.query.vehicleClass];
+        }
+        var vehicle = applicableVehicles.find(function (vehicle) {
             return vehicle.registrationNumber === req.params.registrationNumber;
         });
 
-        if(!vehicle){
-            vehicle=dataObject.vehicles[0];//always return a vehicle for easy use
-        }
-
 		if(vehicle){
+        	vehicle = Object.assign({}, vehicle);
 		    delete vehicle.vehicleClass;
 		    delete vehicle.registrationNumber;
 			delete vehicle.defaultValue;
@@ -31,66 +50,44 @@ router.get('/findByRego/:registrationNumber', function (req, res, next) {
 			delete vehicle.agreedValueMax;
 			delete vehicle.hotlistFlags;
 			delete vehicle.characteristics;
+		}else {
+			return next({"message":req.params.registrationNumber+" not found", "status":404});
 		}
 		
         res.set({'Content-Type': 'application/json'});
         res.end(JSON.stringify(vehicle, null, 2));
-    });
 });
 
 router.get('/makes', function (req, res,next)  {
-    fs.readFile( __dirname + "/../data/vehicle/" + "vehicles.json", 'utf8', function (err, data) {
         if (util.isUndefined(req.query.vehicleClass)) {
             return next({"message":"Query for vehicleClass is not passed", "status":400});
         }
-
-        var dataObject = JSON.parse(data);
-
-
-        console.log(req.query.vehicleClass);
-
-        var applicableVehicles=dataObject.vehicles;
+        //console.log(req.query.vehicleClass);
+        var makes=[];
         if(req.query.vehicleClass==="car" || req.query.vehicleClass==="motorcycle" ){
-            applicableVehicles=dataObject.vehicles.filter(function (vehicle){
-                return vehicle.vehicleClass===req.query.vehicleClass;
-            });
+            makes=makesMap[req.query.vehicleClass];
         }
-        var allMakes=applicableVehicles.map(function (vehicle){return vehicle.make});
-
-        var makes=allMakes.filter(distinct);
-
 
         var result={};
         result.makes=makes;
 
         res.set({'Content-Type':'application/json'});
         res.end( JSON.stringify(result,null,2) );
-    });
 });
 
 router.get('/makes/:make/models', function (req, res, next) {
-    fs.readFile(__dirname + "/../data/vehicle/" + "vehicles.json", 'utf8', function (err, data) {
-
         if (util.isUndefined(req.query.vehicleClass)) {
             return next({"message": "Query for vehicleClass is not passed", "status": 400});
         }
-
-        var dataObject = JSON.parse(data);
 
         if (badHttpStatus.indexOf(req.params.make) !== -1) {
             mockHttpErrorStatus(req.params.make, next);
             return;
         }
 
-
-        var applicableVehicles = dataObject.vehicles.filter(function (vehicle) {
-            if (req.query.vehicleClass === "all") {
-                return vehicle.make === req.params.make;
-            } else {
-                return vehicle.make === req.params.make && vehicle.vehicleClass === req.query.vehicleClass;
-            }
+        var applicableVehicles = vehicleMap[req.query.vehicleClass].filter(function (vehicle) {
+            return vehicle.make === req.params.make;
         });
-
 
         var allModels=applicableVehicles.map(function (vehicle){return vehicle.model});
 
@@ -101,29 +98,20 @@ router.get('/makes/:make/models', function (req, res, next) {
 
         res.set({'Content-Type': 'application/json'});
         res.end(JSON.stringify(result, null, 2));
-    });
 });
 
 router.get('/makes/:make/models/:model/years', function (req, res, next)  {
-    fs.readFile(__dirname + "/../data/vehicle/" + "vehicles.json", 'utf8', function (err, data) {
-
         if (util.isUndefined(req.query.vehicleClass)) {
             return next({"message":"Query for vehicleClass is not passed", "status":400});
         }
-
-        var dataObject = JSON.parse(data);
 
         if (badHttpStatus.indexOf(req.params.make) !== -1) {
             mockHttpErrorStatus(req.params.make, next);
             return;
         }
 
-        var applicableVehicles = dataObject.vehicles.filter(function (vehicle) {
-            var ok = vehicle.make === req.params.make && vehicle.model === req.params.model;
-            if (req.query.vehicleClass !== "all") {
-                ok = ok && vehicle.vehicleClass === req.query.vehicleClass;
-            }
-            return ok;
+        var applicableVehicles = vehicleMap[req.query.vehicleClass].filter(function (vehicle) {
+            return vehicle.make === req.params.make && vehicle.model === req.params.model;
         });
 
         var allYears=applicableVehicles.map(function (vehicle){return vehicle.year});
@@ -135,12 +123,10 @@ router.get('/makes/:make/models/:model/years', function (req, res, next)  {
 
         res.set({'Content-Type':'application/json'});
         res.end( JSON.stringify(result,null,2) );
-    });
 });
 
-router.get('/makes/:make/models/:model/years/:year/bodyStyles', function (req, res, next)  {
-    fs.readFile(__dirname + "/../data/vehicle/" + "vehicles.json", 'utf8', function (err, data) {
 
+router.get('/makes/:make/models/:model/years/:year/bodyStyles', function (req, res, next)  {
         if (util.isUndefined(req.query.vehicleClass)) {
             return next({"message":"Query for vehicleClass is not passed", "status":400});
         }
@@ -149,14 +135,8 @@ router.get('/makes/:make/models/:model/years/:year/bodyStyles', function (req, r
             mockHttpErrorStatus(req.params.make, next);
             return;
         }
-        var dataObject = JSON.parse(data);
-
-        var applicableVehicles = dataObject.vehicles.filter(function (vehicle) {
-            var ok = vehicle.make === req.params.make && vehicle.model === req.params.model && vehicle.year==req.params.year;
-            if (req.query.vehicleClass !== "all") {
-                ok = ok && vehicle.vehicleClass === req.query.vehicleClass;
-            }
-            return ok;
+        var applicableVehicles = vehicleMap[req.query.vehicleClass].filter(function (vehicle) {
+            return vehicle.make === req.params.make && vehicle.model === req.params.model && vehicle.year==req.params.year;
         });
 
         var allStyles=applicableVehicles.map(function (vehicle){return vehicle.bodyStyle});
@@ -168,12 +148,9 @@ router.get('/makes/:make/models/:model/years/:year/bodyStyles', function (req, r
 
         res.set({'Content-Type':'application/json'});
         res.end( JSON.stringify(result,null,2) );
-    });
 });
 
 router.get('/makes/:make/models/:model/years/:year/bodyStyles/:bodyStyle/types', function (req, res,next)  {
-    fs.readFile(__dirname + "/../data/vehicle/" + "vehicles.json", 'utf8', function (err, data) {
-
         if (util.isUndefined(req.query.vehicleClass)) {
             return next({"message":"Query for vehicleClass is not passed", "status":400});
         }
@@ -183,14 +160,8 @@ router.get('/makes/:make/models/:model/years/:year/bodyStyles/:bodyStyle/types',
             return;
         }
 
-        var dataObject = JSON.parse(data);
-
-        var applicableVehicles = dataObject.vehicles.filter(function (vehicle) {
-            var ok = vehicle.make === req.params.make && vehicle.model === req.params.model && vehicle.year==req.params.year &&vehicle.bodyStyle===req.params.bodyStyle;
-            if (req.query.vehicleClass !== "all") {
-                ok = ok && vehicle.vehicleClass === req.query.vehicleClass;
-            }
-            return ok;
+        var applicableVehicles = vehicleMap[req.query.vehicleClass].filter(function (vehicle) {
+            return vehicle.make === req.params.make && vehicle.model === req.params.model && vehicle.year==req.params.year &&vehicle.bodyStyle===req.params.bodyStyle;
         });
 
         var allTypes=applicableVehicles.map(function (vehicle){
@@ -207,31 +178,26 @@ router.get('/makes/:make/models/:model/years/:year/bodyStyles/:bodyStyle/types',
 
         res.set({'Content-Type':'application/json'});
         res.end( JSON.stringify(result,null,2) );
-    });
 });
 
 router.get('/redbookReference/:redbookReference', function (req, res,next)  {
-    fs.readFile(__dirname + "/../data/vehicle/" + "vehicles.json", 'utf8', function (err, data) {
-
         if (badHttpStatus.indexOf(req.params.redbookReference) !== -1) {
             mockHttpErrorStatus(req.params.redbookReference, next);
             return;
         }
 
-        var dataObject = JSON.parse(data);
-
-        var vehicle = dataObject.vehicles.find(function (vehicle) {
+        var vehicle = vehicleData.vehicles.find(function (vehicle) {
             return vehicle.redbookReference === req.params.redbookReference;
         });
 
 		if(vehicle){
+		    vehicle = Object.assign({}, vehicle);
 		    delete vehicle.vehicleClass;
 		    delete vehicle.registrationNumber;
 		}
 		
         res.set({'Content-Type':'application/json'});
         res.end( JSON.stringify(vehicle,null,2) );
-    });
 });
 
 
@@ -269,7 +235,5 @@ function mockHttpErrorStatus(req,next){
         return next({"message": "5xx Err", "status": 500});
     }
 }
-
-
 
 module.exports = router;

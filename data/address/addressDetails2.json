@@ -1,0 +1,11 @@
+{
+  "id": 2,
+  "unitAndFloor": "4N",
+  "streetNumber": 33,
+  "streetName": "Test Street",
+  "suburb": "WLG",
+  "city": "Auckland",
+  "postcode": 8088,
+  "type": "physical",
+  "characteristics":null
+}

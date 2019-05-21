@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var bodyParser = require('body-parser');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -11,6 +12,10 @@ var suburbRouter  = require('./routes/suburb');
 var streetRouter  = require('./routes/street');
 var vehicleRouter  = require('./routes/vehicle');
 var airpointsRouter = require('./routes/airpoints');
+var documentsRouter = require('./routes/document');
+var billingRouter = require('./routes/billing');
+var creditcardRouter = require('./routes/creditcard');
+
 
 var app = express();
 
@@ -19,8 +24,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+//app.use(express.json());
+//app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true, parameterLimit:50000}));
+
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -36,6 +44,10 @@ app.use('/vehicleRegistry/v1/vehicle',vehicleRouter);
 app.use('/vehicle',vehicleRouter);
 app.use('/loyaltyService/v1/airpoints',airpointsRouter);
 app.use('/airpoints',airpointsRouter);
+app.use('/documentService/v1/document',documentsRouter);
+app.use('/billingService/v1/Billing',billingRouter);
+app.use('/billingService/v1/CreditCard',creditcardRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
