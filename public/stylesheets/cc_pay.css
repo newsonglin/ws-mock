@@ -1,0 +1,2446 @@
+/* STANDARD CSS */
+/* Start: PageConfig_30110_STYLE10_STANDARDDISPLAY_0002 */
+
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    background-color: #3e454f;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -20px;
+}
+.push {
+    height: 20px;
+    display: block;
+}
+.DpsRegularTextWeight {
+    font-weight: normal;
+}
+.DpsBoldText {
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 1.25em;
+    padding: 1.25em
+}
+q {
+    font-style: italic;
+}
+acronym,
+abbr {
+    cursor: help;
+    border-bottom: 1px dashed;
+}
+/* set defaults for these */
+
+small {
+    font-size: .85em;
+}
+big {
+    font-size: 1.2em;
+}
+table {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+tbody {
+    margin: 0;
+    padding: 0;
+}
+form {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+.clear {
+    clear: both;
+}
+.blockCenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* remember to set width */
+
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+.underline {
+    text-decoration: underline;
+}
+.noindent {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* end master style sheet */
+
+/* clear header padding, margins */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* normalise all text elements */
+
+p,
+th,
+td,
+li,
+dd,
+dt,
+ul,
+ol,
+blockquote,
+q,
+acronym,
+abbr,
+a,
+input,
+select,
+textarea {
+    margin: 0;
+    padding: 0;
+	white-space: nowrap;
+}
+/*link defaults */
+
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+    text-decoration: none;
+}
+/* remove ie greying link background*/
+
+a:active {
+    background-color: transparent;
+}
+label {
+    cursor: pointer;
+}
+
+/* Remove blue active state border around buttons */
+button:focus {outline:0 !important;}
+
+/* ensure no borders on img elements */
+
+img {
+    border: none;
+}
+.wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+}
+/* DPS Body BG Image */
+
+.DpsBody {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-position: center center;
+}
+
+/* SPINNER */
+
+.DpsFieldDateMonth > option {
+	width: auto; 
+}
+
+div.spinner {
+    position: relative;
+    width: 20px;
+    height: 0px;
+    left: inherit;
+    display: inline-block;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+  
+div.spinner div {
+    width: 2px;
+    height: 5px;
+    background: #fff;
+    position: absolute;
+    left: 6px;
+    top: -8px;
+    opacity: 0;
+    -moz-border-radius: 50px;
+    -webkit-animation: fade 1s linear infinite;
+    -webkit-border-radius: 50px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);   
+    -moz-animation:fade 1s linear infinite;
+    -ms-animation: fade 1s linear infinite;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    padding: 0;
+    margin: 0;   
+}
+
+div.spinner div.bar1 {
+    -webkit-transform:rotate(0deg) translate(0, -142%);
+    -moz-transform: rotate(0deg) translate(0, -142%); 
+    -webkit-animation-delay: 0s; 
+    -moz-animation-delay:0s;
+    -o-transform:rotate(0deg) translate(0, -142%);
+    -ms-transform: rotate(0deg) translate(0, -142%);
+    -o-animation-delay: 0s; 
+    -ms-animation-delay:0s;
+          }  
+          
+div.spinner div.bar2 {
+    -webkit-transform:rotate(30deg) translate(0, -142%);
+    -moz-transform: rotate(30deg)translate(0, -142%); 
+    -webkit-animation-delay: -0.9167s; 
+    -moz-animation-delay:-0.9167s;
+    -o-transform:rotate(30deg) translate(0, -142%);
+    -ms-transform: rotate(30deg) translate(0, -142%);
+    -o-animation-delay: -0.9167s;  
+    -ms-animation-delay:-0.9167s; 
+          }
+div.spinner div.bar3 {
+    -webkit-transform:rotate(60deg) translate(0, -142%);
+    -moz-transform: rotate(60deg)translate(0, -142%);
+    -webkit-animation-delay: -0.833s;
+    -moz-animation-delay: -0.833s;
+    -o-transform:rotate(60deg)translate(0, -142%);
+    -ms-transform: rotate(60deg)translate(0, -142%);
+    -o-animation-delay:  -0.833s; 
+    -ms-animation-delay: -0.833s;
+          }
+div.spinner div.bar4 {
+    -webkit-transform:rotate(90deg) translate(0, -142%);
+    -moz-transform: rotate(90deg)translate(0, -142%);
+    -webkit-animation-delay: -0.75s;
+    -moz-animation-delay:-0.75s; 
+    -o-transform: rotate(90deg)translate(0, -142%);
+    -ms-transform: rotate(90deg)translate(0, -142%);
+    -o-animation-delay:  -0.75s; 
+    -ms-animation-delay: -0.75s;
+          }
+          
+div.spinner div.bar5 {
+    -webkit-transform:rotate(120deg) translate(0, -142%); 
+    -moz-transform: rotate(120deg)translate(0, -142%);
+    -webkit-animation-delay: -0.667s;
+    -moz-animation-delay: -0.667s; 
+    -o-transform:rotate(120deg) translate(0, -142%);
+    -ms-transform: rotate(120deg) translate(0, -142%);
+    -o-animation-delay: -0.667s;
+    -ms-animation-delay:-0.667s;
+          }
+div.spinner div.bar6 {
+    -webkit-transform:rotate(150deg) translate(0, -142%);
+    -moz-transform: rotate(150deg)translate(0, -142%);
+    -webkit-animation-delay: -0.5833s;
+    -moz-animation-delay:-0.5833s;
+    -o-transform:rotate(150deg) translate(0, -142%);
+    -ms-transform: rotate(150deg) translate(0, -142%);
+    -o-animation-delay: -0.5833s;
+    -ms-animation-delay:-0.5833s;
+          }
+div.spinner div.bar7 {
+    -webkit-transform:rotate(180deg) translate(0, -142%);
+    -moz-transform: rotate(180deg)translate(0, -142%);
+    -webkit-animation-delay: -0.5s; 
+    -moz-animation-delay:-0.5s;
+    -o-transform:rotate(180deg) translate(0, -142%);
+    -ms-transform: rotate(180deg) translate(0, -142%);
+    -o-animation-delay: -0.5s; 
+    -ms-animation-delay:-0.5s;
+          }
+          
+div.spinner div.bar8 {
+    -webkit-transform:rotate(210deg) translate(0, -142%);
+    -moz-transform: rotate(210deg)translate(0, -142%); 
+    -webkit-animation-delay: -0.41667s; 
+    -moz-animation-delay:-0.41667s; 
+    -o-transform:rotate(210deg) translate(0, -142%);
+    -ms-transform: rotate(210deg) translate(0, -142%);
+    -o-animation-delay: -0.41667s;  
+    -ms-animation-delay:-0.41667s; 
+          }
+div.spinner div.bar9 {
+    -webkit-transform:rotate(240deg) translate(0, -142%);
+    -moz-transform: rotate(240deg)translate(0, -142%);
+    -webkit-animation-delay: -0.333s;
+    -moz-animation-delay:-0.333s;
+    -o-transform:rotate(240deg) translate(0, -142%);
+    -ms-transform: rotate(240deg) translate(0, -142%);
+    -o-animation-delay:-0.333s; 
+    -ms-animation-delay:-0.333s;
+          }
+          
+div.spinner div.bar10 {
+    -webkit-transform:rotate(270deg) translate(0, -142%); 
+    -moz-transform: rotate(270deg)translate(0, -142%);
+    -webkit-animation-delay: -0.25s;
+    -moz-animation-delay:-0.25s;
+    -o-transform:rotate(270deg) translate(0, -142%);
+    -ms-transform: rotate(270deg) translate(0, -142%);
+    -o-animation-delay:-0.25s; 
+    -ms-animation-delay:-0.25s;
+          }
+div.spinner div.bar11 {
+    -webkit-transform:rotate(300deg) translate(0, -142%);
+    -moz-transform: rotate(300deg)translate(0, -142%);
+    -webkit-animation-delay: -0.1667s; 
+    -moz-animation-delay:-0.1667s;
+    -o-transform:rotate(300deg) translate(0, -142%);
+    -ms-transform: rotate(300deg) translate(0, -142%);
+    -o-animation-delay: -0.1667s; 
+    -ms-animation-delay:-0.1667s;
+          }
+div.spinner div.bar12 {
+    -webkit-transform:rotate(330deg) translate(0, -142%);
+    -moz-transform: rotate(330deg)translate(0, -142%); 
+    -webkit-animation-delay: -0.0833s;
+    -moz-animation-delay: -0.0833s;
+    -o-transform:rotate(330deg) translate(0, -142%);
+    -ms-transform: rotate(330deg) translate(0, -142%);
+    -o-animation-delay: -0.0833s;
+    -ms-animation-delay:-0.0833s;
+          }
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.25;
+    }
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.25;
+    }
+}
+@-moz-keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Redirect Loading Spinner */
+
+.DpsRedirectLoadingSpinner{
+    width: 80px;
+    height: 80px;
+    
+    border: 4px solid #9299a2;
+    border-top:4px solid #ee1c25;
+    border-radius: 100%;
+    
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    
+    animation: spin 0.7s infinite linear;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+.DpsDisabled{
+    pointer-events: none;
+}
+
+.DpsUiPanel.DpsRedirectLoadingSpinnerPanel{
+    border: none!important;
+    background-color: #3e454f!important;
+    border-bottom: none!important;
+    margin: 0px;
+    padding: 0px;
+    height: 0px; /*dont actually want to see the panel at all*/
+}
+
+/* This is a hack since .DpsText gets applied to <space> Ui Panels and I need to remove any styling from that class name */
+.DpsText.DpsRedirectLoadingSpinnerText{
+    margin-top:auto!important;  
+    margin-bottom:auto!important;   
+    padding-top:auto!important;    
+    padding-bottom:auto!important;    
+    padding-left:auto!important;
+    display: block!important;
+    float: none!important;
+}
+
+.DpsRedirectLoadingSpinnerText{
+    height:140px;
+    text-align:center;
+    position: absolute!important;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    display:block;
+    color:#fff;
+    opacity: 1;
+    animation: fade 1s infinite;
+    font-weight:bold;
+}
+
+@keyframes fade {
+  0%,100% { opacity: 0.7 }
+  50% { opacity: 1 }
+}
+    
+
+div.labeled {
+    position: relative;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin: 0; 
+    background: #fff;
+    padding: 0;
+    display: inline-block;
+    color: #c00;
+    line-height: 18px;
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.4);
+    -webkit-border-radius: 1em;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ccc));
+}
+
+div.labeled div.spinner {
+    float: left;
+    vertical-align: top;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+}
+div.labeled div.spinner div {
+    background: #c00;
+}
+
+.DpsWarningBanner {
+    color: #9F6000;
+    background-color: #FEEFB3;
+
+    padding:5px 10px 5px 50px;
+    text-align: center !important;
+}   
+
+/* DPS Error Messages */
+
+.DpsFieldError {
+    color: #a94442;
+}
+.DpsFieldErrorCaptcha{
+    color: #a94442;
+    background-color: #f2dede;
+    padding: 15px!important;
+    margin-top:10px;
+    margin-bottom: 5px;
+    border: 1px solid transparent!important;
+    border-color: #ebccd1!important;
+    border-radius: 4px;
+    line-height: 20px;
+    display:block;
+}
+.DpsPageErrorPanel {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    padding: 15px!important;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ebccd1;
+    border-radius: 4px;
+    display:block!important;
+    float:none!important;
+    margin:0 auto;
+}
+#PxPayAuthResult .DpsPageErrorPanel{
+    float:left!important;
+}
+
+/* DPS Attention Message */
+
+.DpsPageAttentionPanel{
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    padding: 15px!important;
+    margin-bottom: 20px;
+    border: 1px solid #bce8f1;
+    border-radius: 4px;
+    display:block!important;
+    float:none!important;
+    margin:0 auto;
+}
+
+/* DPS Success Message */
+
+.DpsPageSuccessPanel{
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    padding: 15px!important;
+    margin-bottom: 20px;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+    display:block!important;
+    float:none!important;
+    margin:0 auto;
+}
+/* Remove IE red border */
+
+input:required:invalid {
+    outline: none;
+}
+:-moz-ui-invalid {
+    box-shadow: none;
+}
+#CaptchaContainer {
+    max-width:300px;
+    margin:0 auto;
+    margin-top: 10px;
+}
+/* DpsUiPanel Sections */
+
+.DpsUiPanel {
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+    border-bottom: 2px solid #c2c8d2;
+    margin: 5px 5px 10px 5px;
+    padding: 10px 15px 20px 15px;
+    border-radius: 0px;
+}
+
+.DpsUiPanelPostalCode{
+    max-width:85%!important;
+}
+.DpsUiPanelIssueNumber{
+    max-width: 85px;
+}
+.DpsUiPanelCountryDropList{
+    width:210px!important;
+    margin-right:0px!important;
+}
+.DpsUiPanelCvc{
+    max-width:30px;
+    float:left;
+}
+.DpsCvcLink {
+    float: left;
+    margin: 15px 0 0 0;
+    font-size: 13px;
+}
+.DpsUiPanelCvcIcon{
+    margin:15px 10px 0 10px;
+    float:left;
+}
+.DpsUiPanelExpiryDate{
+    width:52px!important;
+}
+
+#Amount, #AmountTotal, #AmountSurcharge, #TotalAmount, #PredetermineAmountSurcharge, #PredetermineAmountTotal, #AjaxAmountSurcharge, #AjaxAmountTotal, #ConvertedAmount {
+    font-weight: bold;
+}
+
+#PxPayHeader.DpsUiPanel {
+    background: none;
+    border: none;
+    padding: 5px 5px 10px 5px;
+    margin: 5px 5px 10px 0px;
+}
+#PxPayFooter.DpsUiPanel {
+    background: none;
+    border: none;
+    margin: 5px 5px 10px 5px;
+    padding: 0 0 0 0px;
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    width: auto;
+}
+table[id^="PxPayFooter_"] {
+    max-width: 455px;
+}
+.DpsItalicText {
+    font-style: italic;
+}
+/* Needed to hide the "numeric spinners" shown on "number" inputs. */
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+fieldset {
+    position: static;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    /*width: 100%; causing panel level fieldset to allow elements flow off panel */
+    min-width: 1%; /* this however stops the inputs going off the panel some smaller widths by overriding -webkit-min-content */
+    display: table-cell; /* fixes field set not staying inside div for firefox */
+    word-wrap: break-word;
+}
+
+.DpsHidden {
+    display: none;
+}
+.DpsVisibilityHidden {
+    visibility: hidden;
+}
+.DpsUppercase {
+    text-transform: uppercase;
+}
+.DpsSrHidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* TITLES */
+
+.DpsUiPanelLegend {
+    margin: 5px 0 5px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 2px solid #eaedf2;
+    font-size: 20px;
+    font-weight: 500;
+}
+.DpsGroupHeader {
+    font-size: 16px !important;
+    margin: 10px 0 10px 0;
+}
+.DpsLink {
+    color: #e7464c;
+}
+/* FORM ITEMS */
+
+.DpsUiPanel input[type="radio"] {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.DpsUiPanel input[type="checkbox"] {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.DpsField {
+    height: 32px;
+    margin: 0;
+    text-align: left;
+    white-space: pre-line;
+    margin: 4px 5px 4px 0;
+}
+input.DpsField {
+    -webkit-appearance: none;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    border: 1px solid #c2c8d2;
+    -webkit-transition: border-color ease-in-out .19s, -webkit-box-shadow ease-in-out .19s;
+    -o-transition: border-color ease-in-out .19s, box-shadow ease-in-out .19s;
+    transition: border-color ease-in-out .19s, box-shadow ease-in-out .19s;
+    background-color: #eaedf2;
+    padding: 3px 5px 3px 3px;
+    font-size: 14px;
+}
+input.DpsField:focus {
+    border: 1px solid #66afe9;
+}
+select.DpsField {
+    border: 1px solid #d5d5d5;
+    color: #333;
+    border-radius: 3px;
+    border: none;
+    border: 1px solid #c2c8d2;
+    -webkit-transition: border-color ease-in-out .19s, -webkit-box-shadow ease-in-out .19s;
+    -o-transition: border-color ease-in-out .19s, box-shadow ease-in-out .19s;
+    transition: border-color ease-in-out .19s, box-shadow ease-in-out .19s;
+    background-color: #eaedf2;
+    height: 40px;
+    float: left;
+    font-size: 14px;
+}
+
+.DpsIssueNumber{
+    max-width:93px;
+}
+.DpsField:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+#PxPaySelectMethodMain .DpsTableCell {
+    padding: 10px 0 0 0;
+}
+#PxPayAccount2AccountAuth .DpsTableCell {
+    padding: 20px 0 0 5px;
+}
+.DpsTableCell {
+    padding: 2px 0px 2px 0;
+}
+.DpsUiPanel input[type=radio]:checked ~ .check {
+    border: 5px solid #e7464c;
+}
+.DpsUiPanel input[type=radio]:checked ~ .check::before {
+    background: #e7464c;
+}
+.DpsUiPanel input[type=radio]:checked ~ label {
+    color: #e7464c;
+}
+#PxPaySelectMethodMain.DpsUiPanel input[type=radio]:checked ~ label {
+   background-color: #f7f7f7;
+   -moz-box-shadow:    inset 0 0 20px #e1e0e0;
+   -webkit-box-shadow: inset 0 0 20px #e1e0e0;
+   box-shadow:         inset 0 0 20px #e1e0e0;
+}
+
+/* Dps Field */
+/* This is used for width for labels + inputs */
+
+.DpsTableCellLegend {
+    width: 40%;
+    white-space: nowrap;
+    padding:2px 0 2px 0;
+}
+
+#PxPayAuthMain .DpsTableCellLegend,
+#PxPayAuthResult .DpsTableCellLegend {
+    height: 25px;
+}
+
+#TxnAuthMasterPass .DpsTableCellLegend,
+#TxnAuthPayPal .DpsTableCellLegend {
+    width: auto;
+}
+div[id^="TxnAuthCreditCard_"] {
+    width: auto;
+}
+.DpsConfirmPaymentDetails .DpsTableCellLegend {
+    width: 0px!important;
+}
+.DpsText {
+    display: inline-block;
+    /*float: left;*/
+    position: static;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    white-space: pre-line;
+    font-size: 13px;
+}
+.DpsTextError{
+    color:red;
+}
+
+textarea.DpsField {
+    white-space: normal;
+}
+.DpsFieldChar2 {
+    width: 20px;
+}
+.DpsFieldChar4 {
+    width: 35px;
+}
+.DpsFieldChar6 {
+    width: 55px;
+}
+.DpsFieldChar8 {
+    width: 75px;
+}
+.DpsFieldChar10 {
+    width: 95px;
+}
+.DpsFieldChar20 {
+    width: 170px;
+}
+.DpsFieldChar30 {
+    width: 170px;
+}
+.DpsFieldChar40 {
+    width: 195px;
+}
+.DpsFieldChar50 {
+    width: 195px;
+}
+.DpsFieldChar60 {
+    width: 195px;
+}
+.DpsFieldChar70 {
+    width: 195px;
+}
+.DpsFieldChar80 {
+    width: 195px;
+}
+.DpsFieldChar90 {
+    width: 195px;
+}
+.DpsFieldChar100 {
+    width: 195px;
+}
+.DpsFieldAmountCurrency {
+    text-align: center;
+    width: 65px !important;
+    margin-top: 4px;
+}
+.DpsFieldAmountNumeral {
+    text-align: right;
+    max-width:60px;
+}
+.DpsFieldAmountFraction {
+    text-align: right;
+    max-width:30px!important;
+    margin: 0px!important;
+}
+#CopyShippingInfoFromBillingInfo{
+    margin: -1px 0 0 0;
+}
+/* TEXT AREAS */
+
+#PxPaySelectMethodMain .DpsText {
+    margin: 0;
+    margin-bottom:10px;
+}
+#TxnAuthCreditCard .DpsText,
+#TxnAuthPaymentExpressWalletLogin .DpsText {
+    margin: 6px 5px 6px 0px;
+}
+/* ACCOUNT 2 ACCOUNT */
+
+.DpsUiA2AHeaderImage {
+    width: 100%;
+    height: 50px;
+    background-repeat: no-repeat;
+}
+.DpsUiA2AHeaderImageStepThrough{
+    width: 100%;
+    height: 65px;
+    background-repeat: no-repeat;
+}
+#PxPayAccount2AccountAuth_Logo {
+    background-image: url(/pxpay/images/a2a/account2accountgrey2.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_SelectBank {
+    background-image: url(/pxpay/images/a2a/selectbank-2016.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_Logon {
+    background-image: url(/pxpay/images/a2a/logon-2016.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_LogonFailed {
+    background-image: url(/pxpay/images/a2a/logonfailed-2016.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_LogonTimeout {
+    background-image: url(/pxpay/images/a2a/logontimeout-2016.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_SelectAccount {
+    background-image: url(/pxpay/images/a2a/selectaccount-2016.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_NoAccount {
+    background-image: url(/pxpay/images/a2a/noaccount-2016.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_Details {
+    background-image: url(/pxpay/images/a2a/details-2016.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_PaymentVerify {
+    background-image: url(/pxpay/images/a2a/verify-2016.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_PaymentVerifyFailed {
+    background-image: url(/pxpay/images/a2a/paymentverifyfailed-2016.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_InsufficientFunds {
+    background-image: url(/pxpay/images/a2a/insufficientfunds-2016.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_PaymentDeclined {
+    background-image: url(/pxpay/images/a2a/paymentdeclined-2016.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_PaymentSuccess {
+    background-image: url(/pxpay/images/a2a/success-2016.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_GeneralError {
+    background-image: url(/pxpay/images/a2a/generalerror-2016.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_Cancelled {
+    background-image: url(/pxpay/images/a2a/cancelled-2016.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_TemporarilyUnavailable {
+    background-image: url(/pxpay/images/a2a/temporarilyunavailable-2016.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_PossiblePayment {
+    background-image: url(/pxpay/images/a2a/possiblepayment-2016.png);
+    background-size: 100%;
+}
+#PxPayAccount2AccountAuth_AccountBlocked {
+    background-image: url(/pxpay/images/a2a/notsetup-2016.png);
+    background-size: 100%;
+}
+
+/* A2A fields */
+
+/* a2a radio centered
+#PxPayAccount2AccountAuth .DpsRadioSet {
+    display: table;
+    margin: 0 auto;
+}
+*/
+
+.DpsRadioButton {
+    margin-top: 10px;
+}
+
+#CustomerId {
+    width: 150px;
+}
+#CustomerPassword {
+    width: 150px;
+}
+#PayeeParticulars {
+    width: 100px;
+}
+#PayeeCode {
+    width: 100px;
+}
+#PayerParticulars {
+    width: 100px;
+}
+#PayerCode {
+    width: 100px;
+}
+#PayerReference {
+    width: 100px;
+}
+#ChallengeCode {
+    width: 100px;
+}
+/* PAYMENT CHECKOUT */
+
+.DpsMerchantAuthorizedName {
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+.DpsMerchantAuthorizedAddress {
+    font-weight: bold;
+}
+
+/* PX WALLET */
+
+#WhatIsTheWallet {
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 20px 0 0 0;
+    font-size: 13px;
+    text-decoration: none!important;
+    background-image: url(/pxpay/images/info.png);
+    background-repeat: no-repeat;
+    background-position: 20px 11px;
+    padding: 20px 0 10px 35px;
+    display: block;
+    margin: 0 auto;
+    max-width: 250px;
+    text-align: center;
+}
+#WhatIsTheWallet:hover {
+    color: #e7464c;
+    transition: color 0.5s ease;
+}
+.DpsWalletForgotPassword {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    color: #e7464c;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+.DpsWalletForgotPassword:hover {
+    color: #141414;
+}
+.DpsWalletFormSection {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ebebeb;
+}
+.DpsWalletLinks {
+    border-bottom: 1px solid #ebebeb;
+}
+.DpsWalletNoAccount {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    color: #e7464c;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+.DpsWalletNoAccount:hover {
+    color: #141414;
+}
+.DpsInfoLinkWallet {
+    display: block;
+    padding: 20px 0 0 0;
+}
+
+/* CC stuff */
+
+.DpsPxPayBrandLogo {
+    padding: 5px 0 10px 0;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hack for bug in IE 11- ID 1218984  as the max-width is not working on IE 11
+   to fit the oversize logo in the form and the side effect is small logo is stretched
+   which is better than broken table
+   Only happened in IE11
+*/
+*::-ms-backdrop, .DpsPxPayBrandLogo {
+    padding: 5px 0 15px 0;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+#DpsFooterLogoDps{
+    max-width: 100%;
+    height: auto;
+    display: block;       
+}
+.DpsFooterCardLogo {
+    vertical-align: top;
+    float: left;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+}
+#A2ASecurityInfoLink {
+    display: table;
+    margin: 20px auto;
+    color: #333;
+    border: 0;
+    cursor: pointer;
+    font-size: 13px;
+    text-decoration: none!important;
+    background-image: url(/pxpay/images/info.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    padding: 10px 0 10px 35px;
+}
+#A2ASecurityInfoLink:hover {
+    color: #e7464c;
+    transition: color 0.5s ease;
+}
+
+/* INTERAC */
+#MonerisIOPLearnMore {
+    padding: 4px 0 0 0;
+    float: left;
+}
+
+/* SELECTED PAYMENT METHOD LOGOS / HEADERS */
+
+#PxPayChinaUnionPay_Logo {
+    height: 50px;
+    background-image: url(/pxpay/images/UnionPay_brand_logo_small.png);
+    background-position: center;
+}
+#PxPayIOP_Logo {
+    height: 50px;
+    background-image: url(/pxpay/images/interac-online-logo.png);
+    background-position: center;
+}
+#PxPayPayPal_Logo{
+    height: 50px;
+    background-image:url(/pxpay/images/Paypal_logo.png);
+    background-position: center;
+}
+#PxPayLFSCard_Logo {
+    height: 85px;
+    background-image: url(/pxpay/images/GemVisa-BrandDevice-Cards-Landscape-Small.png);
+    background-position: center;
+}
+#PxPayOxipay_Logo {
+    height: 50px;
+    background-image: url(/pxpay/images/OxipayLogo.png);
+    background-position: center;
+}
+#PxPayAlipay_Logo {
+    height: 50px;
+    background-image: url(/pxpay/images/AlipayLogo.png);
+    background-position: center;
+}
+#PxPayWeChat_Logo {
+    height: 50px;
+    background-image: url(/pxpay/images/WeChatLogo.png);
+    background-position: center;
+}
+#PxPayWallet_Logo {
+    height: 80px;
+    background-image: url(/pxpay/images/PxWalletLogo.png);
+    background-position: center;
+}
+#PxPayWallet_Stepthrough {
+    height: 70px;
+    background-image: url(/pxpay/images/PxWalletStepThrough.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#PxPayWallet_StepthroughTwo {
+    height: 70px;
+    background-image: url(/pxpay/images/PxWalletStepThroughTwo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#PxPayWallet_StepthroughThree {
+    height: 70px;
+    background-image: url(/pxpay/images/PxWalletStepThroughThree.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#PxPayWallet_StepthroughFour {
+    height: 70px;
+    background-image: url(/pxpay/images/PxWalletStepThroughFour.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#PxPayWallet_StepthroughPwReset {
+    height: 70px;
+    background-image: url(/pxpay/images/PxWalletStepThroughPwReset.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#PxPayWallet_StepthroughPwResetTwo {
+    height: 70px;
+    background-image: url(/pxpay/images/PxWalletStepThroughPwResetTwo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#PxPayWallet_StepthroughPwResetThree {
+    height: 70px;
+    background-image: url(/pxpay/images/PxWalletStepThroughPwResetThree.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#PxPayWallet_StepthroughPwResetFour {
+    height: 70px;
+    background-image: url(/pxpay/images/PxWalletStepThroughPwResetFour.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#PxPayMasterPass_Logo {
+    height: 50px;
+    background-image: url(/pxpay/images/MasterPassLogo.png);
+    background-position: center;
+}
+/* This is a class because it was setup differently from a dev */
+.PxPayVisaCheckout {
+     margin:0 auto;
+     margin-top:20px;
+     width:213px;
+     height:47px;
+     display:block;
+}
+.v-learn{
+    text-align:center;
+    display:block;
+    margin:10px 0 0 0;
+}
+
+/* SELECTED PAYMENT METHOD SECTION */
+.DpsUiA2AHeaderImage {
+    margin: 5px 0 5px 0px;
+}
+.DpsUiA2AHeaderImageStepThrough{
+    width: 100%;
+    height: 65px;
+    background-repeat: no-repeat;
+}
+
+.DpsSelectMethodHelpText{
+    display:block;
+    width: 100%;
+}
+.DpsCreditCardRadio{
+    background-color:#faf9f9;
+    border:1px solid #ebebeb;   
+    width:48%;
+    margin:1px;
+    float:left;
+    opacity:1;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+    
+    /* IE 8 Hacks for Styling */
+    border:0px\9;
+    float:none\9;
+    background-color:#fff\9;
+}
+.DpsCreditCardRadio #CreditCard{
+    display:none;
+    display:block\9;
+    float:left\9;
+    
+}
+.DpsCreditCardRadio label{
+    text-indent: -9999px;
+    display:block;
+    background-repeat:no-repeat;
+    background-size:110px;   
+    background-position: center;
+    height:50px;   
+    
+    /* IE 8 Hacks for Styling */
+    text-indent: 1px\9;
+    display:block\9;
+    background:none\9;
+    background-repeat:no-repeat\9;
+    background-size:auto\9;   
+    background-position: center\9;
+    height:auto\9;
+}
+
+.DpsAccount2AccountRadio{
+    background-color:#faf9f9;
+    border:1px solid #ebebeb;   
+    width:48%;
+    margin:1px;
+    float:left;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+    
+    /* IE 8 Hacks for Styling */
+    border:0px\9;
+    float:none\9;
+    background-color:#fff\9;
+}
+
+.DpsAccount2AccountRadio #Account2Account{
+    display:none;
+    display:block\9;
+    float:left\9;
+}
+.DpsAccount2AccountRadio label{
+    text-indent: -9999px;
+    display:block;
+    background-image:url('/pxpay/images/PaymentSchemeRadioButtonLogos/a2a.png');
+    background-repeat:no-repeat;
+    background-size:120px;
+    background-position: center;
+    height:50px;
+    opacity:1;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+    
+    /* IE 8 Hacks for Styling */
+    text-indent: 1px\9;
+    display:block\9;
+    background:none\9;
+    background-repeat:no-repeat\9;
+    background-size:auto\9;   
+    background-position: center\9;
+    height:auto\9;
+}
+
+.DpsPayPalRadio{
+    background-color:#faf9f9;
+    border:1px solid #ebebeb; 
+    width:48%;
+    margin:1px;
+    float:left;
+    
+    /* IE 8 Hacks for Styling */
+    border:0px\9;
+    float:none\9;
+    background-color:#fff\9;
+}
+.DpsPayPalRadio #PayPal{
+    display:none;
+    display:block\9;
+    float:left\9;
+}
+.DpsPayPalRadio label{
+    text-indent: -9999px;
+    display:block;
+    background-image:url('/pxpay/images/PaymentSchemeRadioButtonLogos/paypal.png');
+    background-repeat:no-repeat;
+    background-size:80px;
+    background-position: center;
+    height:50px;
+    
+    
+    /* IE 8 Hacks for Styling */
+    text-indent: 1px\9;
+    display:block\9;
+    background:none\9;
+    background-repeat:no-repeat\9;
+    background-size:auto\9;   
+    background-position: center\9;
+    height:auto\9;   
+}
+
+.DpsOxipayRadio {
+    background-color: #faf9f9;
+    border: 1px solid #ebebeb;
+    width: 48%;
+    margin: 1px;
+    float: left;
+    /* IE 8 Hacks for Styling */
+    border: 0px\9;
+    float: none\9;
+    background-color: #fff\9;
+}
+
+.DpsOxipayRadio #Oxipay {
+    display: none;
+    display: block\9;
+    float: left\9;
+}
+
+.DpsOxipayRadio label {
+    text-indent: -9999px;
+    display: block;
+    background-image: url('/pxpay/images/PaymentSchemeRadioButtonLogos/Oxipay.png');
+    background-repeat: no-repeat;
+    background-size: 80px;
+    background-position: center;
+    height: 50px;
+    /* IE 8 Hacks for Styling */
+    text-indent: 1px\9;
+    display: block\9;
+    background: none\9;
+    background-repeat: no-repeat\9;
+    background-size: auto\9;
+    background-position: center\9;
+    height: auto\9;
+}
+
+.DpsAlipayRadio {
+    background-color: #faf9f9;
+    border: 1px solid #ebebeb;
+    width: 48%;
+    margin: 1px;
+    float: left;
+    /* IE 8 Hacks for Styling */
+    border: 0px\9;
+    float: none\9;
+    background-color: #fff\9;
+}
+
+.DpsAlipayRadio #Alipay {
+    display: none;
+    display: block\9;
+    float: left\9;
+}
+
+.DpsAlipayRadio label {
+    text-indent: -9999px;
+    display: block;
+    background-image: url('/pxpay/images/PaymentSchemeRadioButtonLogos/Alipay.png');
+    background-repeat: no-repeat;
+    background-size: 80px;
+    background-position: center;
+    height: 50px;
+    /* IE 8 Hacks for Styling */
+    text-indent: 1px\9;
+    display: block\9;
+    background: none\9;
+    background-repeat: no-repeat\9;
+    background-size: auto\9;
+    background-position: center\9;
+    height: auto\9;
+}
+
+.DpsWeChatRadio {
+    background-color: #faf9f9;
+    border: 1px solid #ebebeb;
+    width: 48%;
+    margin: 1px;
+    float: left;
+    /* IE 8 Hacks for Styling */
+    border: 0px\9;
+    float: none\9;
+    background-color: #fff\9;
+}
+
+.DpsWeChatRadio #WeChat {
+    display: none;
+    display: block\9;
+    float: left\9;
+}
+
+.DpsWeChatRadio label {
+    text-indent: -9999px;
+    display: block;
+    background-image: url('/pxpay/images/PaymentSchemeRadioButtonLogos/WeChat.png');
+    background-repeat: no-repeat;
+    background-size: 95px;
+    background-position: center;
+    height: 50px;
+    /* IE 8 Hacks for Styling */
+    text-indent: 1px\9;
+    display: block\9;
+    background: none\9;
+    background-repeat: no-repeat\9;
+    background-size: auto\9;
+    background-position: center\9;
+    height: auto\9;
+}
+
+
+.DpsMasterPassRadio{
+    background-color:#faf9f9;
+    border:1px solid #ebebeb;  
+    width:48%;
+    margin:1px;
+    float:left;
+    
+    /* IE 8 Hacks for Styling */
+    border:0px\9;
+    float:none\9;
+    background-color:#fff\9;
+}
+
+.DpsMasterPassRadio #MasterPass{
+    display:none;
+    display:block\9;
+    float:left\9;
+}
+
+.DpsMasterPassRadio label{
+    text-indent: -9999px;
+    display:block;
+    background-image:url('/pxpay/images/PaymentSchemeRadioButtonLogos/MasterPassLogo.png');
+    background-repeat:no-repeat;
+    background-size:90px;
+    background-position: center;
+    height:50px;
+
+    /* IE 8 Hacks for Styling */
+    text-indent: 1px\9;
+    display:block\9;
+    background:none\9;
+    background-repeat:no-repeat\9;
+    background-size:auto\9;   
+    background-position: center\9;
+    height:auto\9;
+}
+
+.DpsUPOPRadio{
+    background-color:#faf9f9;
+    border:1px solid #ebebeb;  
+    width:48%;
+    margin:1px;
+    float:left;
+    
+    /* IE 8 Hacks for Styling */
+    border:0px\9;
+    float:none\9;
+    background-color:#fff\9;
+}  
+.DpsUPOPRadio #UPOP{
+    display:none;
+    display:block\9;
+    float:left\9;
+}
+
+.DpsUPOPRadio #UPOP5{
+    display:none;
+    display:block\9;
+    float:left\9;
+}
+
+.DpsUPOPRadio label{
+    text-indent: -9999px;
+    display:block;
+    background-image:url('/pxpay/images/PaymentSchemeRadioButtonLogos/unionpay.png');
+    background-repeat:no-repeat;
+    background-size:60px;
+    background-position: center;
+    height:50px;
+    
+    /* IE 8 Hacks for Styling */
+    text-indent: 1px\9;
+    display:block\9;
+    background:none\9;
+    background-repeat:no-repeat\9;
+    background-size:auto\9;   
+    background-position: center\9;
+    height:auto\9;
+}
+
+.DpsPaymentExpressWalletRadio{
+    background-color:#faf9f9;
+    border:1px solid #ebebeb;  
+    width:48%;
+    margin:1px;
+    float:left;
+    
+    /* IE 8 Hacks for Styling */
+    border:0px\9;
+    float:none\9;
+    background-color:#fff\9;
+}
+
+.DpsPaymentExpressWalletRadio #PaymentExpressWallet{
+    display:none;
+    display:block\9;
+    float:left\9;
+}
+
+.DpsPaymentExpressWalletRadio label{
+    text-indent: -9999px;
+    display:block;
+    background-image:url('/pxpay/images/PaymentSchemeRadioButtonLogos/PxWalletLogo.png');
+    background-repeat:no-repeat;
+    background-size:120px;
+    background-position: center;
+    height:50px;
+    
+    /* IE 8 Hacks for Styling */
+    text-indent: 1px\9;
+    display:block\9;
+    background:none\9;
+    background-repeat:no-repeat\9;
+    background-size:auto\9;   
+    background-position: center\9;
+    height:auto\9;
+}
+
+.DpsMonerisIOPRadio{
+    background-color:#faf9f9;
+    border:1px solid  #ebebeb;
+    width:48%;
+    margin:1px;
+    float:left;
+    
+    /* IE 8 Hacks for Styling */
+    border:0px\9;
+    float:none\9;
+    background-color:#fff\9;
+}
+
+.DpsMonerisIOPRadio #MonerisIOP{
+    display:none;
+    display:block\9;
+    float:left\9;
+}
+
+.DpsMonerisIOPRadio label{
+    text-indent: -9999px;
+    display:block;
+    background-image:url('/pxpay/images/PaymentSchemeRadioButtonLogos/interac-online-logo.png');
+    background-repeat:no-repeat;
+    background-size:80px;
+    background-position: center;
+    height:50px;
+}
+
+.DpsGEcardRadio{
+    background-color:#faf9f9;
+    border:1px solid #ebebeb; 
+    width:48%;
+    margin:1px;
+    float:left;
+    
+    /* IE 8 Hacks for Styling */
+    border:0px\9;
+    float:none\9;
+    background-color:#fff\9;
+}
+
+.DpsGEcardRadio #GECard{
+    display:none;
+    display:block\9;
+    float:left\9;
+}
+
+.DpsGEcardRadio label{
+    text-indent: -9999px;
+    display:block;
+    background-image:url('/pxpay/images/PaymentSchemeRadioButtonLogos/gem-visa.png');
+    background-repeat:no-repeat;
+    background-size:100px;
+    background-position: center;
+    height:50px;
+    
+    /* IE 8 Hacks for Styling */
+    text-indent: 1px\9;
+    display:block\9;
+    background:none\9;
+    background-repeat:no-repeat\9;
+    background-size:auto\9;   
+    background-position: center\9;
+    height:auto\9;
+}
+
+.DpsVisaCheckoutRadio{
+    background-color:#faf9f9;
+    border:1px solid #ebebeb; 
+    width:48%;
+    margin:1px;
+    float:left;
+    
+    /* IE 8 Hacks for Styling */
+    border:0px\9;
+    float:none\9;
+    background-color:#fff\9;
+}
+
+.DpsVisaCheckoutRadio #VisaCheckout{
+    display:none;
+    display:block\9;
+    float:left\9;
+}
+
+.DpsVisaCheckoutRadio label{
+    text-indent: -9999px;
+    display:block;
+    background-image:url('/pxpay/images/PaymentSchemeRadioButtonLogos/visa-checkout.png');
+    background-repeat:no-repeat;
+    background-size:115px;
+    background-position: center;
+    height:50px;
+    
+    /* IE 8 Hacks for Styling */
+    text-indent: 1px\9;
+    display:block\9;
+    background:none\9;
+    background-repeat:no-repeat\9;
+    background-size:auto\9;   
+    background-position: center\9;
+    height:auto\9;
+}
+
+
+.DpsApplePayRadio{
+    background-color:#faf9f9;
+    border:1px solid #ebebeb; 
+    width:48%;
+    margin:1px;
+    float:left;
+    
+    /* IE 8 Hacks for Styling */
+    border:0px\9;
+    float:none\9;
+    background-color:#fff\9;
+}
+
+.DpsApplePayRadio #ApplePay{
+    display:none;
+    display:block\9;
+    float:left\9;
+}
+
+.DpsApplePayRadio label{
+    text-indent: -9999px;
+    display:block;
+    background-image:url('/pxpay/images/PaymentSchemeRadioButtonLogos/apple-pay-mark.svg');
+    background-repeat:no-repeat;
+    background-size:30%;
+    background-position: center;
+    height:50px;
+    
+    /* IE 8 Hacks for Styling */
+    text-indent: 1px\9;
+    display:block\9;
+    background:none\9;
+    background-repeat:no-repeat\9;
+    background-size:auto\9;   
+    background-position: center\9;
+    height:auto\9;
+}
+
+#PxPaySelectMethodMain .DpsTableCell {
+    padding: 0!important;
+}
+
+.DpsGooglePayRadio{
+    background-color:#faf9f9;
+    border:1px solid #ebebeb; 
+    width:48%;
+    margin:1px;
+    float:left;
+    
+    /* IE 8 Hacks for Styling */
+    border:0px\9;
+    float:none\9;
+    background-color:#f7f7f7\9;
+}
+
+.DpsGooglePayRadio #GooglePay{
+    display:none;
+    display:block\9;
+    float:left\9;
+}
+
+.DpsGooglePayRadio label{
+    text-indent: -9999px;
+    display:block;
+    background-image:url('/pxpay/images/PaymentSchemeRadioButtonLogos/google-pay-mark.svg');
+    background-repeat:no-repeat;
+    background-size:30%;
+    background-position: center;
+    height:50px;
+    
+    /* IE 8 Hacks for Styling */
+    text-indent: 1px\9;
+    display:block\9;
+    background:none\9;
+    background-repeat:no-repeat\9;
+    background-size:auto\9;   
+    background-position: center\9;
+    height:auto\9;
+}
+
+#GooglePayButtonContainer {
+    width: 100%;
+    height: 47px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    white-space: normal;
+}
+
+#GooglePayButtonContainer div, #GooglePayButtonContainer button {
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 200px;
+    height: 47px;
+}
+
+.DpsCreditCardRadio label:hover,
+.DpsAccount2AccountRadio label:hover,
+.DpsMasterPassRadio label:hover,
+.DpsUPOPRadio label:hover,
+.DpsMonerisIOPRadio label:hover,
+.DpsPayPalRadio label:hover,
+.DpsOxipayRadio label:hover,
+.DpsAlipayRadio label:hover,
+.DpsWeChatRadio label:hover,
+.DpsPaymentExpressWalletRadio label:hover,
+.DpsVisaCheckoutRadio label:hover,
+.DpsGooglePayRadio label:hover,
+.DpsGEcardRadio label:hover {
+    opacity: 0.8;
+}
+
+/* Results Page */
+.DpsTransactionResultsFailedIcon {
+    text-indent: -9999px;
+    background-image: url('/pxpay/images/transaction-failed.png');
+    background-position: center;
+    background-size: 55px 55px;
+    background-repeat: no-repeat;
+    display: block !important;
+    float: none !important;
+    position: relative !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    padding-top: none !important;
+    padding-bottom: none !important;
+    padding-left: none !important;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto !important;
+    text-align: center;
+}
+.DpsTransactionResultsFailed{
+    margin:0 auto;
+    color:#ee1c25;
+    font-size:18px;
+    display:block;
+    text-align:center;
+    width:100%;
+    margin-bottom:20px;
+}
+
+
+.DpsTransactionResultsApprovedIcon{
+    text-indent:-9999px;
+    background-image:url('/pxpay/images/transaction-success.png');
+    background-position:center;
+    background-size:55px 55px;
+    background-repeat:no-repeat;
+    display:block!important;
+    float:none!important;
+    position:relative!important;
+    margin-top:auto!important;
+    margin-bottom:auto!important;
+    padding-top:none!important;
+    padding-bottom:none!important;
+    padding-left:none!important;
+    width:70px;
+    height:70px;
+    margin:0 auto!important;
+    text-align:center;  
+}
+
+.DpsTransactionResultsApproved{
+    margin:0 auto;
+    color:#4caf50;
+    font-size:18px;
+    display:block;
+    text-align:center;
+    width:100%;
+    margin-bottom:30px;   
+}
+
+.DpsSendMailToCardHolder{
+    padding:15px;
+    max-width:91%;
+    margin:10px 0 0 0;
+    border:1px solid #ebebeb;
+    border-radius:2px;
+}
+
+.DpsSendMailToCardHolder input[type="checkbox"]{
+    margin:-1px 0 0 10px;
+    height:18px;
+    width:18px;
+}
+
+.DpsLayoutTable {
+    margin: 5px 0 0 0;
+    width: 100%;
+}
+
+/* PAY FORM */
+.DpsUiPanelPayForm h2{
+    text-align:center;
+    font-weight:bold;
+    margin:10px 0 0 0;
+}
+
+.DpsUiPanelPayFormDesc{
+    text-align:center;
+    font-size:16px;
+    display:block;
+    float:none!important;
+}
+.DpsUiPanelPayFormInput{
+    width:97%!important;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #707070;
+}
+::-moz-placeholder { /* Firefox 19+ NOTE: Specific colour for Firefox as it renders placeholder colours slightly different */
+  color: #000;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #707070;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #707070;
+}
+/* BUTTONS */
+
+.DpsPxPayOK {
+    background-color: #ee1c25;
+    color: #fff;
+    padding: 15px 15px 15px 15px;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px 5px 0 0;
+    border-bottom: 2px solid #bd2e33;
+    border-radius: 2px;
+    text-decoration: none!important;
+    font-size: 14px;
+    display:block;
+    width: 70%;
+    margin:0 auto;
+    margin-top:15px;
+    margin-bottom:15px;
+    border-radius:2px;
+    text-align:center;
+    font-size: 16px;
+}
+.DpsPxPayOK:hover {
+    background-color: #c91a22;
+    border-bottom: 2px solid #992327;
+    transition: background 0.5s ease;
+}
+.DpsPxPayCancel {
+    background-color: transparent;
+    border: none;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+}
+#PxPayFooter .DpsLink {
+    border: 1px solid #ebebeb;
+    padding: 10px 5px 10px 5px;
+    background-color: #fff;
+    border-bottom: 2px solid #c2c8d2;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 0px;
+    min-width:100px;
+}
+#PxPayFooter .DpsLink:hover {
+    background-color: #fff;
+    transition: background 0.5s ease;
+}
+/* Ts & Cs */
+
+#A2ATermsCondition {
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 5px;
+    font-size: 13px;
+}
+#TnC {
+    margin: 0px 10px 10px 5px;
+}
+#TnC2{
+    margin: -4px 5px 0px 0px;
+}
+.PaymentCheckoutTermsAndConditionsText,
+.PaymentCheckoutTermsAndConditionsUrl{
+    font-size:13px;
+}
+.DpsLink#TnCLink {
+    margin: 9px 0 0 0;
+}
+#A2ATermsCondition .DpsFieldLegend, 
+#A2ATermsCondition #TnC{
+    float:left;
+    margin:0 5px 0 6px;
+}
+.DpsA2ATermsAndConditions{
+    margin:20px 0 10px 0;
+}
+
+.DpsConfirmPaymentDetails {
+    padding: 10px;
+    margin: 20px 0 10px 0;
+    border-radius: 0px;
+    border:1px solid #ebebeb;
+    border-radius:2px;
+    font-size: 13px;
+}
+
+.DpsConfirmPaymentDetails .DpsTableCell {
+    width: 1%;
+}
+
+.DpsConfirmPaymentDetails .DpsFieldLegend {
+    white-space: pre-line;
+}
+
+/* FOOTER */
+
+#PxPayCardSchemeLogoGroup {
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    width: auto;
+}
+.DpsFooterCardLogo {
+    vertical-align: top;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: 100% Auto;
+    margin: 0px 10px 0px 0px;
+}
+#PrivacyPolicy {
+    text-align: center;
+    width: 25%;
+    display: table;
+    cursor: pointer;
+    text-decoration: underline;
+}
+/* FOOTER LOGOS */
+
+#VisaCardLogo {
+    background-image: url(/pxpay/images/Logos/PaymentScheme/VISA.png);
+}
+#MasterCardCardLogo {
+    background-image: url(/pxpay/images/Logos/PaymentScheme/MasterCard.png);
+}
+#AmexCardLogo {
+    background-image: url(/pxpay/images/Logos/PaymentScheme/Amex.png);
+}
+#QCardLogo {
+    background-image: url(/pxpay/images/Logos/PaymentScheme/QCard.png);
+}
+#UnionPayLogo {
+    background-image: url(/pxpay/images/Logos/PaymentScheme/UnionPay.png);
+}
+#JCBCardLogo {
+    background-image: url(/pxpay/images/Logos/PaymentScheme/JCB.png);
+}
+#DinersCardLogo {
+    background-image: url(/pxpay/images/Logos/PaymentScheme/DinersClub.png);
+}
+#EzibuyGiftCardLogo {
+    background-image: url(/pxpay/images/Logos/PaymentScheme/Ezibuy.png);
+}
+#VerifiedByVisaCardLogo {
+    background-image: url(/pxpay/images/Logos/PaymentScheme/VerifiedByVisa.png);
+}
+#VisaCheckoutLogo {
+    background-image: url(/pxpay/images/Logos/PaymentScheme/visacheckout.png);
+}
+#MasterCardSecureCodeCardLogo {
+    background-image: url(/pxpay/images/Logos/PaymentScheme/MasterCardSecureCode.png);
+}
+#AmexSafeKeyCardLogo {
+    background-image: url(/pxpay/images/Logos/PaymentScheme/AmexSafeKey.png);
+}
+#DiscoveryCardLogo {
+    background-image: url(/pxpay/images/Logos/PaymentScheme/DiscoveryCard.png);
+}
+#BancontactLogo {
+    background-image: url(/pxpay/images/Logos/PaymentScheme/Bancontact.png);
+}
+/* OVERRIDE CSS FOR SESSION PAGES */
+
+.DpsButton1IsLink {
+    padding: 15px 20px 15px 20px!important;
+    float: right;
+    width: auto;
+}
+/* POP UP FOR CVC */
+
+.box {
+    width: 40%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+}
+.button {
+    color: red;
+    padding-left: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 10px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.popup p {
+    white-space: normal; /* fixes text off page issues*/
+}
+
+.content h2 {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 0 10px 0;
+    font-weight: bold;
+    color: #ee1c25;
+}
+.content h3 {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 0 10px 0;
+}
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.popup .close:hover {
+    color: #ee1c25;
+}
+.popup .content {
+    max-height: 470px;
+    overflow-y: scroll
+}
+@media screen and (max-width: 700px) {
+    .box {
+        width: 84%;
+    }
+    .popup {
+        width: 84%;
+    }
+}
+/* Responsive Pop-Up Content */
+
+.pop-up-row {
+    width: 100%;
+    margin: 0px 0 0 0;
+    padding: 10px 0 0 0;
+}
+.pop-up-col8 {
+    width: 100%;
+    float: left;
+}
+.pop-up-col4 {
+    width: 100%;
+    float: left;
+}
+.clear {
+    clear: both;
+}
+.pop-up-card {
+    float: left;
+    margin-top: 10px;
+}
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* IPhone 5 / HTC Desire and small devices */
+@media (min-width: 230px) and (max-width: 320px) {
+     
+    .DpsUiPanelPostalCode{
+        max-width:80% !important; /*80% works for the post code however*/
+    }
+   
+    .DpsUiA2AHeaderImage {
+        margin: 0;
+    }
+    .DpsUiA2AHeaderImage {
+        width: 100%;
+        height: 50px;
+        background-repeat: no-repeat;
+    }
+    .DpsUiA2AHeaderImage {
+        width: 250px;
+    }
+}
+
+/* iPhone 5 Specific - Device has a smaller width and needs a unique Media Q. */
+
+@media screen and (device-aspect-ratio: 40/71) {
+
+    .DpsFieldAmountNumeral {
+        max-width:65px;
+    }
+    .DpsFieldAmountFraction {
+        max-width:46px!important;
+    }
+    /* ACCOUNT 2 ACCOUNT */
+    .DpsUiA2AHeaderImage {
+        margin: 0;
+        width: 100%;
+        height: 50px;
+        background-repeat: no-repeat;
+    }
+    .DpsTableCellLegend {
+        width: 40%;
+        white-space:normal;
+    }
+
+}
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    
+    #PxPayAccount2AccountAuth .DpsTableCellLegend{
+        width:40%;
+    }
+
+    .DpsFieldAmountNumeral {
+        max-width:76px;
+    }
+    .DpsFieldAmountFraction {
+        max-width:30px!important;
+    }
+    
+    .DpsText {
+        margin-top: 3px;
+        margin-bottom: 3px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 0px;
+    }
+
+    /* POP UP CVC */
+    
+    .popup {
+        width: 65%;
+    }
+    .content h2 {
+        padding: 0 0 30px 0;
+        color: #ee1c25;
+    }
+    .content h3 {
+        padding: 10px 0 10px 0;
+    }
+    .popup .content {
+        max-height: 30%;
+        overflow: auto;
+    }
+    .pop-up-col8 {
+        width: 66.66666667%;
+        float: left;
+    }
+    .pop-up-col4 {
+        width: 33.33333333%;
+        float: left;
+    }
+    .pop-up-card {
+        float: right;
+    }
+    .popup .close {
+        right: 30px;
+    }
+    /* PX WALLET */
+    
+    #WhatIsTheWallet {
+        background-position: 20px 14px;
+    }
+    .DpsWalletForgotPassword {
+        padding: 20px 0 20px 0px;
+        margin: 0 0 0 20px;
+        display: inline-block;
+        color: #e7464c;
+        text-align: center;
+        width: auto;
+        border-bottom: 0;
+    }
+    .DpsWalletNoAccount {
+        padding: 20px 0 20px 15px;
+        margin: 0 25px 0 0px;
+        display: block;
+        float: right;
+        border-left: 1px solid #ebebeb;
+        color: #e7464c;
+        text-align: center;
+        width: auto;
+    }
+  
+    /* ACCOUNT 2 ACCOUNT */
+    
+    .DpsUiA2AHeaderImage {
+        max-width: 455px;
+    }
+    #PxPayFooter .DpsLink {
+        padding: 10px 5px 10px 5px;
+    }
+    
+    /* Setting background size so that for tablet+ the image is it's exact size */
+    #PxPayAccount2AccountAuth_SelectBank,
+    #PxPayAccount2AccountAuth_Logon,
+    #PxPayAccount2AccountAuth_SelectAccount,
+    #PxPayAccount2AccountAuth_Details,
+    #PxPayAccount2AccountAuth_PaymentVerify
+    {
+        background-size:355px 68px;
+    }
+
+    /* FOOTER */
+    
+    .DpsFooterCardLogo {
+        width: 60px;
+        height: 60px;
+        margin: 0px 10px 0px 0px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    /* TITLES */
+    
+    .DpsUiPanelLegend {
+        margin: 10px 0 10px 0;
+    }
+    /* RADIO BUTTON SPACING */
+    
+    #PxPaySelectMethodMain .DpsTableCell {
+        padding: 10px 0 0 0;
+    }
+    #PxPayAccount2AccountAuth .DpsTableCell {
+        padding: 15px 0 0 5px;
+    }
+    /* PX WALLET */
+    
+    #WhatIsTheWallet {
+        line-height: 20px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+
+    .popup {
+        width: 30%;
+    } 
+
+}
+
+@supports (-webkit-appearance: -apple-pay-button) {
+    .DpsPxPayApplePay {
+        width: 100%;
+        height: 47px;
+        font-size: 0;
+        display: inline-block;
+        -webkit-appearance: -apple-pay-button;
+        -apple-pay-button-style: black;
+    }
+}
+
+@supports not (-webkit-appearance: -apple-pay-button) {
+    .DpsPxPayApplePay {
+        width: 100%;
+        height: 47px;
+        font-size: 0;
+        display: inline-block;
+        background-size: 100% 60%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        border-radius: 5px;
+        padding: 0px;
+        box-sizing: border-box;
+        min-width: 200px;
+        min-height: 32px;
+        max-height: 64px;
+        background-image: -webkit-named-image(apple-pay-logo-white);
+        background-color: black;
+    }
+}
+
+.PxPayWeChatQRCode {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 220px;
+    width: 220px;
+}
+
+.PxPayWeChatLoadingSpinner {
+    width: 20px;
+    height: 20px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #ee1c25;
+    border-radius: 100%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: spin 0.7s infinite linear;
+}
+
+.DpsDCCExchangeNote {
+    padding: 10px;
+    margin: 20px 0 10px 0;
+    border-radius: 0px;
+    border: 1px solid #ebebeb;
+    border-radius: 2px;
+    font-size: 13px;
+}

@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    title= title
+    <style type='text/css' >.DpsBody { background-color: #fff !important; }</style>
+
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/cc_pay.css')
+
+body(class='DpsBody')
+block content
+div(name='DpsPopupBackground' class='DpsPopupBackground') 
+div(class='wrapper container-fluid')
+  div()
+    form(name="add-estimation", method="post")
+        div.DpsUiPanel
+            div
+                h1.DpsUiPanelLegend=title
+            div
+                fieldset.DpsPanelFieldset                
+                    table.DpsLayoutTable
+                        tbody
+                            tr
+                                td.DpsTableCellLegend
+                                    label(class='DpsFieldChar8 DpsFieldLegend') Card Type:
+                                td(class='DpsTableCell ' colspan='1')
+                                    span(readonly class='DpsFieldChar8 DpsField DpsTextField DpsReadOnlyField' name='CardName' id='36864783'  placeholder='') Visa
+                            tr
+                                td.DpsTableCellLegend
+                                    label(class=' DpsFieldChar8 DpsFieldLegend') Transaction Type:
+                                td(class='DpsTableCell ' colspan='1' )
+                                    span(readonly class=' DpsFieldChar8 DpsField DpsTextField DpsReadOnlyField' name='TxnType' id='36864787'  placeholder='') Purchase
+                            tr
+                                td.DpsTableCellLegend
+                                    label(class=' DpsFieldChar8 DpsFieldLegend') Auth Code:
+                                td(class='DpsTableCell ' colspan='1' )
+                                    span(readonly class=' DpsFieldChar8 DpsField DpsTextField DpsReadOnlyField' name='AuthCode' id='36864788'  placeholder='') 132647
+                            tr
+                                td.DpsTableCellLegend
+                                    label(class='DpsFieldChar20 DpsFieldLegend') Reference:
+                                td(class='DpsTableCell' colspan='1')
+                                    span(readonly class='DpsFieldChar20 DpsField DpsTextField DpsReadOnlyField' name='DpsTxnRef' id='36864789'  placeholder='') #{transactionReference}
+                    a(class='DpsButton1 DpsPxPayOK btn btn-primary DpsButton1IsLink' href=nextUrl id='36864812') Next
+
+

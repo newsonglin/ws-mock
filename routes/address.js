@@ -17,6 +17,10 @@ router.get('/findAddress', function (req, res, next) {
     if (util.isUndefined(req.query.addressQuery)) {
          return next({"message":"Query string is not passed", "status":400});
     }
+    // For testing when address service crashed.
+    if (req.query.addressQuery == 'ERROR500') {
+         return next({"message": "500 Error", "status": 500});
+    }
     // For testing Address Not Found scenario
     if (req.query.addressQuery == 'testaddressnotfound') {
          res.set({'Content-Type':'application/json','Encodeing':'utf8'});

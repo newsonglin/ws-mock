@@ -1,0 +1,98 @@
+doctype html
+html
+  head
+    title= title
+    <style type='text/css' >.DpsBody { background-color: #fff !important; }</style>
+
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/cc_pay.css')
+
+    script.
+        function PxHackNav(id, idval) {
+            var Target = document.getElementById('IId');
+            if (Target == null)
+                return;            
+            Target.value = id;
+            Target = document.getElementById('IIdVal');            
+            if (Target == null)                
+                return;            
+            Target.value = idval;  
+        }        
+
+body(class='DpsBody')
+block content
+div(name='DpsPopupBackground' class='DpsPopupBackground')
+div(class='wrapper container-fluid')
+  div()
+    form(name="add-estimation", method="post", action='/billingService/v1/CreditCard/ccPayProcess')
+        div(class='DpsUiPanel ' id='PxPayAuthMain' name='PxPayAuthMain')
+            div
+                h1.DpsUiPanelLegend Payment Checkout
+            div
+    
+                fieldset.DpsPanelFieldset
+                    legend(class='DpsSrHidden' aria-hidden='false') Payment Checkout
+                    table.DpsLayoutTable
+                        tbody
+                            tr
+                            tr
+                            tr
+                                td.DpsTableCellLegend
+                                    label.DpsFieldLegend Amount:
+                                td(class='DpsTableCell ' colspan='1' )
+                                    span(class='DpsField DpsFieldChar10' name='Amount' id='Amount' class="DpsReadOnlyField") &#36;#{amount}  (NZD)
+         
+        div(class='DpsUiPanel ' id='TxnAuthCreditCard' name='TxnAuthCreditCard')
+            div
+                h1.DpsUiPanelLegend=title
+            div
+                fieldset.DpsPanelFieldset                
+                    table.DpsLayoutTable
+                        tbody
+                            tr  
+                                td.DpsTableCellLegend
+                                    label(class=' DpsFieldChar20 DpsFieldLegend'  for='36864063' ) Card Number:
+                                    span.DpsRequiredFieldMarker *
+                                td( class='DpsTableCell ',colspan='1')
+                                    input(class=' DpsFieldChar20 DpsField DpsTextField', type='text', name='CardNumber', id='36864063',   maxlength='19', minlength='16', required, placeholder='', value='') 
+                            tr  
+                                td.DpsTableCellLegend
+                                    label(class='DpsFieldChar30 DpsFieldLegend', for='36864064' ) Name On Card:
+                                    span.DpsRequiredFieldMarker *
+                                td(class='DpsTableCell ' colspan='1' )
+                                    input(class='DpsFieldChar30 DpsField DpsTextField', type='text', name='CardHolderName', id='36864064',   maxlength='32', minlength='4', required, placeholder='',  value='' )
+                            tr    				 
+                                td.DpsTableCellLegend
+                                    label.DpsFieldLegend Expiry Date:
+                                    span.DpsRequiredFieldMarker *
+                                td(class='DpsTableCell ' colspan='1')
+                                    fieldset
+                                        <legend class='DpsSrHidden' aria-hidden='false'>Expiry Date</legend>
+                                        <label class='DpsSrHidden' aria-hidden='false'  for='DateExpiry_1' >Expiry Date (MM)</label>
+                                        select(class='DpsField DpsUiPanelExpiryDate DpsFieldDateMonth' name='DateExpiry_1' id='DateExpiry_1'  required)
+                                            -for(var i = 1;i<=12;i++){
+                                                if i<10
+                                                    option(class='DpsField DpsFieldDateMonth' value="0#{i}") 0#{i}
+                                                else
+                                                    option(class='DpsField DpsFieldDateMonth' value="#{i}") #{i}
+                                            -}
+
+                                        label(class='DpsSrHidden' aria-hidden='false'  for='DateExpiry_2') Expiry Date (YY)
+                                        select(class='DpsField DpsUiPanelExpiryDate DpsFieldDateYear' name='DateExpiry_2' id='DateExpiry_2'  required)
+                                            -for(var i = 19;i<=19+15;i++){
+                                            if i<10
+                                                option(class='DpsField DpsFieldDateMonth' value="0#{i}") 0#{i}
+                                            else
+                                                option(class='DpsField DpsFieldDateMonth' value="#{i}") #{i}
+                                            -}
+                    button(class='DpsButton1 DpsPxPayOK btn btn-success', type='submit', id='36864117', name='Add', value='Add', onclick='PxHackNav("36864117", "Add")')
+                        span.label Submit
+                    button(class='DpsButton1 DpsPxPayCancel btn btn-success' type='submit' id='36864118' name='Cancel' value='Cancel' onclick='PxHackNav("36864118", "Cancel")' formnovalidate)
+                        div Cancel Payment
+
+
+        input(name='requestKey' type='hidden' id='requestKey' value=requestKey)
+        <input name='IId' type='hidden' id='IId' value='' />
+        <input name='IIdVal' type='hidden' id='IIdVal' value='' />              
+
+
